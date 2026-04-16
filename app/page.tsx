@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import Link from 'next/link'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
@@ -52,18 +52,17 @@ export default function HomePage() {
 
             <aside className="hero-dossier">
               <div className="dossier-portrait">
-                <Image
-                  src="/mohsen_bild.jpeg"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/mohsen_bild.jpeg`}
                   alt="Mohsen Abyari Business Portrait"
-                  width={960}
-                  height={1180}
-                  priority
                   style={{
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
                     objectPosition: 'center top',
                     filter: 'grayscale(10%) saturate(0.82) contrast(1.04)',
+                    display: 'block',
                   }}
                 />
               </div>
